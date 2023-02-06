@@ -1,1 +1,167 @@
 
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3D5656;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+
+.chef-hat{
+    width: 70px;
+    height: 70px;
+}
+
+.primary-nav{
+    display: none;
+}
+
+
+.landing-page-container{
+    background-color: #3D5656;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.header{
+    padding: 10px 0;
+    background-color:#3D5656;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.showcase-container{
+    background-color: #3D5656;
+    height: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    place-content: center;
+}
+
+.showcase-brandname{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.showcase-brandname p{
+    font-size: 20px;
+    letter-spacing: 6px;
+    font-weight: 700;
+}
+
+.showcase-btn{
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    width: max-content;
+    font-weight: 500;
+
+}
+
+.brand-img{
+    width: 50px;
+    height: 70px;
+}
+
+.landing-img{
+    max-width: 100%;
+    min-height: 100%;
+
+}
+
+.showcase-location{
+    font-size: 18px;
+}
+
+
+
+.showcase-image{
+    border: 1px solid black;
+}
+
+.showcase-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+
+    /* border: 1px solid black; */
+}
+
+.specials{
+    background-color: black;
+    padding: 100px;
+}
+
+
+
+@media only screen and (min-width: 650px) {
+    .header{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .primary-nav{
+        display: flex;
+        align-items: center; 
+    }
+
+    .flex-nav{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .showcase-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .showcase-text{
+        order: 1;
+    }
+
+    .showcase-btn{
+        border: none;
+        padding: 15px 22px;
+        color: white;
+        background-color: black;
+        font-size: 16px;
+    
+    }
+
+    .showcase-description{
+        line-height: 25px;
+    }
+
+    .showcase-image{
+        
+        order: 2;
+    }
+
+    
+
+    .brand-img{
+        width:50px;
+        height: 70px;
+    }
+  }
