@@ -6,7 +6,7 @@ function Header(){
 
     return (
         <header className='header'>
-            <img className='chef-hat' src={require("../assets/images/chef-hat.png")} alt="" />
+            <img className='chef-hat' src={require("../assets/images/chef.png")} alt="" />
             <nav className='primary-nav'>
                 <ul className='flex-nav' >
                     <li><a href="">HOME</a></li>

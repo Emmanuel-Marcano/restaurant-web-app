@@ -3,6 +3,7 @@ import FullScreen from "./components/FullScreen"
 import Header from "./components/Header"
 import Showcase from "./components/Showcase";
 import Specials from "./components/Specials";
+import Testimonials from "./components/Testimonials";
 import './App.css';
 
 function App() {
@@ -12,10 +13,8 @@ function App() {
         <Header/>
         <Showcase/>
       </FullScreen>
-
       <Specials/>
-
-
+      <Testimonials/>
     </>
   );
 }

@@ -8,8 +8,6 @@ function Showcase(){
         <div className="showcase-container">
             <div className='showcase-image'>    
                 <img className='landing-img' src={require("../assets/images/landing-img.jpg")} alt="" />
-            
-               
             </div>
             <div className='showcase-text'>
                 <div className='showcase-brandname'>
