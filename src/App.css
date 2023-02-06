@@ -20,6 +20,10 @@ a{
     font-weight: 500;
 }
 
+/* p{
+    margin: 16px 0;
+} */
+
 
 .chef-hat{
     width: 80px;
@@ -44,17 +48,30 @@ a{
     background-color:#3D5656;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
   
+}
+
+.login-btn{
+    padding: 12px 20px;
+    background-color: transparent;
+    outline: 2px solid black;
+    border-radius: 5px;
+
+
 }
 
 .showcase-container{
     background-color: #3D5656;
     height: 100%;
     display: grid;
-    gap: 20px;
+    gap: 40px;
     grid-template-columns: 1fr;
-    place-content: center;
+    /* place-content: center; */
+    align-content: space-evenly;
+    justify-content: center;
+   
+  
    
 }
 
@@ -68,6 +85,11 @@ a{
     font-size: 18px;
     letter-spacing: 6px;
     font-weight: 700;
+}
+
+.showcase-description{
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .showcase-btn{
@@ -116,8 +138,9 @@ a{
 .showcase-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     color: white;
+
     /* gap:10px; */
 
     /* border: 1px solid black; */
@@ -125,7 +148,7 @@ a{
 
 .specials-section{
     background-color: #f6f9fc; 
-    padding: 60px 30px;
+    padding: 40px 30px;
     border: 1px solid black;
 }
 
@@ -133,6 +156,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 40px;
     /* border: 1px solid black; */
 }
 
@@ -160,13 +184,13 @@ a{
 }
 
 .dishes-text{
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 
 .dishes{
-    width: 100%;
-   height: 300px;
+   width: 100%;
+   height: 250px;
    border-radius: 8px;
 }
 
@@ -223,33 +247,42 @@ a{
 
     .showcase-container{
         grid-template-columns: 1fr 1fr;
+       
     }
 
     .showcase-text{
         order: 1;
+        /* border: 1px solid black */
     }
+
+    
 
     .showcase-btn{
         border: none;
-        padding: 15px 22px;
+        padding: 20px 45px;
         color: white;
         background-color: black;
-        font-size: 16px;
-        margin-top: 30px;
+        font-size: 20px;
+        margin-top: auto;
+      
+        font-weight: 600;
+        /* justify-self: end; */
     }
 
     .specials-btn{
         border: none;
-        padding: 15px 22px;
+        padding: 20px 35px;
         color: white;
         background-color: black;
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 600;
       
 
     }
 
     .showcase-description{
-        line-height: 25px;
+        line-height: 35px;
+        font-size: 20px;
     }
 
     .showcase-image{
@@ -258,8 +291,8 @@ a{
     }
 
     .showcase-brandname p{
-        font-size: 25px;
-        letter-spacing: 6px;
+        font-size: 30px;
+        letter-spacing: 10px;
         font-weight: 700;
     }
 
@@ -275,12 +308,23 @@ a{
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .specials-header{
+
+
+    }
+
 
     .specials-header p{
         font-size: 30px;
         font-weight: 500;
     
     }
+
+    .dishes{
+       
+        height: 300px;
+       
+     }
 
     .dishes-btn{
         font-size: 14px;

@@ -14,7 +14,7 @@ function Header(){
                     <li><a href="">MENU</a></li>
                     <li><a href="">RESERVATIONS</a></li>
                     <li><a href="">ORDER ONLINE</a></li>
-                    <li><a href="">LOG IN</a></li>
+                    <li>< a className="login-btn"  href="">LOG IN</a></li>
                 </ul>
             </nav>
 
