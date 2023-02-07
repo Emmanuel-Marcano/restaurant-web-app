@@ -5,6 +5,7 @@ function Specials(){
 
     return (
         <section className="specials-section">
+            <div className="container">
             <div className="specials-header">
                 <p>SPECIALS</p>
                 <button className="specials-btn" >Order Online</button>
@@ -48,6 +49,7 @@ function Specials(){
                     <button className="dishes-btn">Order delivery</button>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
 

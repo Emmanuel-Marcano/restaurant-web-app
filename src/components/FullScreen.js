@@ -1,12 +1,16 @@
 
-import '../App.css';
+
 
 function FullScreen({children}){
 
 
     return (
         <div className="landing-page-container">
+           
+
+          
             {children}
+           
         </div>
     )
 }
