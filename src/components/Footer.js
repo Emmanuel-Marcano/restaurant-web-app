@@ -17,7 +17,7 @@ function Footer(){
             </div>
 
             <div>
-                <p>Second navigation</p>
+                <p>Nav</p>
                 <ul>
                     <li>Home</li>
                     <li>About</li>

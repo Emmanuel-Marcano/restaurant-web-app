@@ -2,65 +2,79 @@
 
 import React from "react"
 
+
 function CustomAlert(){
 
-      this.alert = function(message,title){
-      document.body.innerHTML = document.body.innerHTML + '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
-  
-      let dialogoverlay = document.getElementById('dialogoverlay');
-      let dialogbox = document.getElementById('dialogbox');
-      
-      let winH = window.innerHeight;
-      dialogoverlay.style.height = winH+"px";
-      
-      dialogbox.style.top = "100px";
-  
-      dialogoverlay.style.display = "block";
-      dialogbox.style.display = "block";
-      
-      document.getElementById('dialogboxhead').style.display = 'block';
-  
-      if(typeof title === 'undefined') {
-        document.getElementById('dialogboxhead').style.display = 'none';
-      } else {
-        document.getElementById('dialogboxhead').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> '+ title;
-      }
+    this.alert = function(message,title){
+    document.body.innerHTML = document.body.innerHTML + '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
 
-      document.getElementById('dialogboxbody').innerText = message;
-      document.getElementById('dialogboxfoot').innerHTML = '<button class="pure-material-button-contained active" onclick="customAlert.ok()">OK</button>';
-    }
+    let dialogoverlay = document.getElementById('dialogoverlay');
+    let dialogbox = document.getElementById('dialogbox');
     
-    this.ok = function(){
-      document.getElementById('dialogbox').style.display = "none";
-      document.getElementById('dialogoverlay').style.display = "none";
-    //  window.location.reload()
+    let winH = window.innerHeight;
+    dialogoverlay.style.height = winH + "px";
+    
+    dialogbox.style.top = "100px";
+
+    dialogoverlay.style.display = "block";
+    dialogbox.style.display = "block";
+    
+    document.getElementById('dialogboxhead').style.display = 'block';
+
+    if(typeof title === 'undefined') {
+      document.getElementById('dialogboxhead').style.display = 'none';
+    } else {
+      document.getElementById('dialogboxhead').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> '+ title;
     }
+
+    document.getElementById('dialogboxbody').innerText = message;
+    document.getElementById('dialogboxfoot').innerHTML = '<button id="btns" class="pure-material-button-contained active">OK</button>';
+    document.getElementById('btns').onclick = function() {
+        document.getElementById('dialogbox').style.display = "none";
+        document.getElementById('dialogoverlay').style.display = "none";
+        window.location.reload()
+  }
+
+ 
+  //  window.location.reload()
   }
   
-  let customAlert = new CustomAlert();
-
+//   this.ok = function() {
+//     document.getElementById('dialogbox').style.display = "none";
+//     document.getElementById('dialogoverlay').style.display = "none";
+//   //  window.location.reload()
+//   }
+}
 
 
 
 
 function BookingForm(){
 
+ 
+    
+    let customAlert = new CustomAlert();
 
-    const occasionRef = React.useRef(null)
-    const guestsRef = React.useRef(null)
-    const dateRef = React.useRef(null)
-    const timeRef = React.useRef(null)
+
+    const occasionRef = React.useRef("")
+    const guestsRef = React.useRef("")
+    const dateRef = React.useRef("")
+    const timeRef = React.useRef("")
+
+  
+
+
 
    
    function handleSubmit(e){
     e.preventDefault()
 
-    // console.log(dateRef.current.value, occasionRef.current.value, guestsRef.current.value, timeRef.current.value)
-    customAlert.alert(`Your table for ${guestsRef.current.value} at our Little Lemon restaurant has been successfully booked for the date of ${dateRef.current.value} at ${timeRef.current.value}. We are looking forward to host you for your ${occasionRef.current.value}!`, "Success!")
+    if(occasionRef.current.value === "" || guestsRef.current.value === "" || dateRef.current.value === "" || timeRef.current.value === "" ){
+        customAlert.alert('Please make sure to fill all of the inputs.', "Failure: Missed Inputs")
 
-
-
-    // alert(`Your table for ${guestsRef.current.value} at our Little Lemon restaurant has been successfully booked for the date of ${dateRef.current.value} at ${timeRef.current.value}. We are looking forward to host you for your ${occasionRef.current.value}!`)
+    } else{
+        customAlert.alert(`Your table for ${guestsRef.current.value} at our Little Lemon restaurant has been successfully booked for the date of ${dateRef.current.value} at ${timeRef.current.value}. We are looking forward to host you for your ${occasionRef.current.value}!`, `Success!`)
+    }
 
 
    }
@@ -72,6 +86,8 @@ function BookingForm(){
         <h1>Reserve a Table</h1>
         
         <form onSubmit={handleSubmit} action="">
+
+          
 
             <div>
             <label for="res-date">Choose date: </label>
