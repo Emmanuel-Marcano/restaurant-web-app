@@ -1,7 +1,6 @@
 
-import FullScreen from "./components/FullScreen"
-import Header from "./components/Header"
-import Showcase from "./components/Showcase";
+
+import LandingPage from "./components/LandingPage";
 import Specials from "./components/Specials";
 import Testimonials from "./components/Testimonials";
 import About from "./components/About";
@@ -9,17 +8,15 @@ import Footer from "./components/Footer";
 import './App.css';
 
 function App() {
+  
   return (
-    <>
-      <FullScreen>
-        <Header/>
-        <Showcase/>
-      </FullScreen>
+     <>
+      <LandingPage/>
       <Specials/>
       <Testimonials/>
       <About/>
       <Footer/>
-    </>
+     </>    
   );
 }
 

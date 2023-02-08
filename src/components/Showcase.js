@@ -1,5 +1,5 @@
 
-
+import {Link} from "react-router-dom"
 
 function Showcase(){
 
@@ -21,7 +21,7 @@ function Showcase(){
                 culpa dolor vitae quisquam quod tempore quam.
                 Deleniti, sapiente laudantium.
                 </p>
-                <button className='showcase-btn'>Reserve a Table</button>
+                <Link to="/booking-form" className='showcase-btn'>Reserve a Table</Link>
             </div>
         </div>
     )
